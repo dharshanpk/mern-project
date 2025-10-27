@@ -20,7 +20,7 @@ app.use(cors())
 app.use("/api/products",productRoutes);
 
 if (process.env.NODE_ENV === 'production') {
-  const frontendPath = path.join(__dirname, '../frontend/dist');
+  const frontendPath = path.join(__dirname, '../Frontend/dist');
   app.use(express.static(frontendPath));
 
   app.get(/.*/, (req, res) => {
