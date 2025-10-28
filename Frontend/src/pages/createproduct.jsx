@@ -9,7 +9,7 @@ export default function Createproduct() {
     const handleSubmit=async(e) => {
         console.log(e.target.value);
         try{
-            const res=await fetch('http://localhost:3000/api/products',{
+            const res=await fetch('/api/products',{
                 method:'POST',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify({ name ,price, image})
